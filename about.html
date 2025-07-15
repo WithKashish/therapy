@@ -100,4 +100,118 @@
     }
 
     .about-image {
-      fle
+      flex: 1 1 400px;
+      text-align: center;
+    }
+
+    .about-image img {
+      max-width: 100%;
+      border-radius: 10px;
+      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- ✅ Fixed Navbar -->
+  <header class="navbar">
+    <div class="nav-left">WithKashish</div>
+    <nav class="nav-center">
+      <a href="about.html">About your therapist</a>
+      <a href="workshops.html">Workshops</a>
+      <a href="booking.html">Book your session now</a>
+    </nav>
+    <div class="nav-right">&#9776;</div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="about-therapist">
+    <div class="about-wrapper">
+      <div class="about-text">
+        <h1>YELLLOO!!</h1>
+        <p>
+          Hey there!! I’m Kashish. Taking this first step takes immense courage, and I honor that.
+          And full disclosure, I’ve navigated my own stuff to stand here. So, when I say -
+          "there might be moments you want to hide yourself completely in this room.
+          But I promise you, I’ll still see every single bit of you." I mean it.
+          The most important thing? When that happens, it’s absolutely going to be safe and okay.
+        </p>
+      </div>
+      <div class="about-image">
+        <img src="kashish-about.png" alt="Kashish smiling at dog" />
+      </div>
+    </div>
+  </section>
+
+  <!-- Journey Section -->
+  <section class="journey-section">
+    <div class="journey-container">
+      <h2>My Journey</h2>
+      <p>The truth is, my story started long before I understood anything. I lost my mom when I was just 16 days old... I didn’t even get to know her, and still — I missed her...</p>
+      <p>I grew up in a big joint family. There were always people around, a lot of love, and even more pampering. But I never really felt safe... That silence turned into anger, frustration, distance.</p>
+      <p>Academically, my cousins were brilliant. And I was just… trying. But no matter how much I pushed myself... it was easier to fake it than to feel the constant shame of failing.</p>
+      <p>Food became my comfort. My escape. I gained weight, struggled with obesity... My body became something I felt disconnected from — a source of shame, not home.</p>
+      <p>There were other things too... I was loud, funny, dramatic — but inside, I was shut down. I craved connection, but mistook attention for closeness.</p>
+      <p>I held so much inside... Then one day, a friend looked at me and gently said, “Why don’t you try therapy?”</p>
+      <p>Eventually I went. And in that room, I was allowed to just be. I could talk about things I never told anyone... Like my pain made sense. Like I made sense.</p>
+      <p>But little by little, I started coming back to myself... I found a deeper connection to who I really am.</p>
+      <p>That’s why I created <strong>WithKashish</strong>. Not because I have all the answers. But because I know what it feels like to live with unspoken pain. <strong>WithKashish</strong> is a space where you don’t have to perform... You’re allowed to just be. Exactly as you are.</p>
+    </div>
+  </section>
+
+  <!-- Qualifications Section -->
+  <section class="qualifications-section">
+    <div class="qualifications-container">
+      <h2>My Qualifications and Expertise.</h2>
+      <p>Heard my story? Great! Now, for the part where you're probably wondering, "Okay, but does Kashish actually know her stuff?" Think of this as your quick, no-boring-bits qualification check...</p>
+      <p>I did my schooling from <strong>Laxman Public School</strong>. My formal education started with <strong>B.A. in Psychology Honours from Delhi University (Zakir Husain Delhi College)</strong>, then a <strong>Post-Graduation in Counselling Psychology from Amity University Noida</strong>, along with a <strong>Diploma in Early Childhood Care and Education</strong>.</p>
+      <p>I've trained under Senior Psychologists at <strong>Sir Ganga Ram Hospital</strong>, <strong>Holy Family Hospital</strong>, and worked on initiatives like the <strong>Disha Kiran – IITD Project</strong>.</p>
+      <p><strong>Modalities:</strong> Certified in <strong>Expressive Arts Therapy (CID-UNESCO)</strong>, <strong>Internal Family Systems (IFS)</strong>, <strong>Shadow Work</strong>, and <strong>Cognitive Behavioral Therapy (CBT)</strong>.</p>
+      <p><strong>Crisis & Listening Expertise:</strong> QPR (Question. Persuade. Refer) Suicide Gatekeeper, Suicide Prevention Training, 140+ hours of intensive listening training.</p>
+      <p><strong>Body Language Certified</strong> + published research in <em>“Humanities and Social Science Review”</em>.</p>
+      <p><strong>400+ client sessions</strong> and <strong>15+ raw, healing workshops across India</strong>. I’ve done the work—personally and professionally—to be truly present. <strong>WithKashish</strong>.</p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-left">
+        <h2>WithKashish</h2>
+        <p class="footer-sub">Connect With Us</p>
+        <ul class="contact-list">
+          <li><i class="fas fa-phone-alt"></i> +91 7827055968</li>
+          <li><i class="fas fa-envelope"></i> <a href="mailto:kashishgupta05@gmail.com">kashishgupta05@gmail.com</a></li>
+          <li><i class="fas fa-map-marker-alt"></i> East of Kailash, New Delhi, India</li>
+        </ul>
+      </div>
+      <div class="footer-right">
+        <ul class="policy-list">
+          <li><a href="Privacy-policy.html">Privacy Policy</a></li>
+          <li><a href="accessibility-statement.html">Accessibility Statement</a></li>
+          <li><a href="terms-&-conditions.html">Terms & Conditions</a></li>
+          <li><a href="refund-policy.html">Refund Policy</a></li>
+        </ul>
+        <div class="social-icons">
+          <a href="https://linkedin.com/in/kashishgupta05" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+          <a href="https://instagram.com/therapy_withkashish" target="_blank"><i class="fab fa-instagram"></i></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Toggle Navbar on Mobile -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const navToggle = document.querySelector('.nav-right');
+      const navLinks = document.querySelector('.nav-center');
+
+      navToggle.addEventListener('click', () => {
+        navLinks.classList.toggle('show');
+      });
+    });
+  </script>
+
+</body>
+</html>
