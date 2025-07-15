@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Book a Session | WithKashish</title>
   <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
   <style>
     body {
       background-color: #f7f3fe;
@@ -49,6 +50,21 @@
 </head>
 <body>
 
+  <!-- Navbar -->
+  <header class="navbar">
+    <div class="nav-left">WithKashish</div>
+    <nav class="nav-center" id="nav-links">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="workshops.html">Workshops</a>
+      <a href="booking.html">Book a Session</a>
+    </nav>
+    <div class="nav-right" onclick="toggleMenu()">
+      <i class="fas fa-bars"></i>
+    </div>
+  </header>
+
+  <!-- Booking Content -->
   <div class="booking-page">
     <h1>Booking Information</h1>
     <div class="booking-form">
@@ -62,35 +78,41 @@
     </div>
   </div>
 
-</body>
-
   <!-- Footer -->
-<footer class="footer">
-  <div class="footer-container">
-    <div class="footer-left">
-      <h2>WithKashish</h2>
-      <p class="footer-sub">Connect With Us</p>
-      <ul class="contact-list">
-        <li><i class="fas fa-phone-alt"></i> +91 7827055968</li>
-        <li><i class="fas fa-envelope"></i> <a href="mailto:kashishgupta05@gmail.com">kashishgupta05@gmail.com</a></li>
-        <li><i class="fas fa-map-marker-alt"></i> East of Kailash, New Delhi, India</li>
-      </ul>
-    </div>
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-left">
+        <h2>WithKashish</h2>
+        <p class="footer-sub">Connect With Us</p>
+        <ul class="contact-list">
+          <li><i class="fas fa-phone-alt"></i> +91 7827055968</li>
+          <li><i class="fas fa-envelope"></i> <a href="mailto:kashishgupta05@gmail.com">kashishgupta05@gmail.com</a></li>
+          <li><i class="fas fa-map-marker-alt"></i> East of Kailash, New Delhi, India</li>
+        </ul>
+      </div>
 
-    <div class="footer-right">
-      <ul class="policy-list">
-        <li><a href="Privacy-policy.html">Privacy Policy</a></li>
-        <li><a href="accessibility-statement.html">Accessibility Statement</a></li>
-        <li><a href="terms-&-conditions.html">Terms & Conditions</a></li>
-        <li><a href="refund-policy.html">Refund Policy</a></li>
-      </ul>
-      <div class="social-icons">
-        <a href="https://linkedin.com/in/kashishgupta05" target="_blank"><i class="fab fa-linkedin-in"></i></a>
-        <a href="https://instagram.com/therapy_withkashish" target="_blank"><i class="fab fa-instagram"></i></a>
+      <div class="footer-right">
+        <ul class="policy-list">
+          <li><a href="Privacy-policy.html">Privacy Policy</a></li>
+          <li><a href="accessibility-statement.html">Accessibility Statement</a></li>
+          <li><a href="terms-&-conditions.html">Terms & Conditions</a></li>
+          <li><a href="refund-policy.html">Refund Policy</a></li>
+        </ul>
+        <div class="social-icons">
+          <a href="https://linkedin.com/in/kashishgupta05" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+          <a href="https://instagram.com/therapy_withkashish" target="_blank"><i class="fab fa-instagram"></i></a>
+        </div>
       </div>
     </div>
-  </div>
-</footer>
+  </footer>
 
+  <!-- Optional JS for menu toggle -->
+  <script>
+    function toggleMenu() {
+      const nav = document.getElementById('nav-links');
+      nav.classList.toggle('show');
+    }
+  </script>
 
+</body>
 </html>
