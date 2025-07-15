@@ -67,19 +67,17 @@
 
 <body>
 
-  <!-- Responsive Navigation -->
-  <header class="navbar">
-    <div class="nav-left">WithKashish</div>
-    <nav class="nav-center">
-      <a href="about.html">About your therapist</a>
-      <a href="workshops.html">Workshops</a>
-      <a href="booking.html">Book your session now</a>
-    </nav>
-    <div class="nav-right">&#9776;</div> <!-- Hamburger icon -->
-  </header>
+<!-- Responsive Navigation -->
+<header class="navbar">
+  ...
+</header>
+
+<!-- ✅ START: Add this wrapper -->
+<div class="page-container">
 
   <!-- Hero Section -->
   <section class="about-therapist">
+
     <div class="about-wrapper">
       <div class="about-text">
         <h1>YELLLOO!!</h1>
@@ -129,8 +127,11 @@
     </div>
   </section>
 
-  <!-- Footer -->
-  <footer class="footer">
+</div> <!-- ✅ END: Close .page-container -->
+
+<!-- Footer -->
+<footer class="footer">
+
     <div class="footer-container">
       <div class="footer-left">
         <h2>WithKashish</h2>
