@@ -165,9 +165,14 @@ body {
   text-decoration: underline;
 }
 
+.footer-right {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
 .social-icons {
   display: flex;
-  justify-content: flex-end;
   gap: 1rem;
   margin-top: 1rem;
 }
@@ -189,8 +194,9 @@ body {
     text-align: center;
   }
 
-  .footer-right,
-  .footer-left {
+  .footer-left,
+  .footer-right {
+    align-items: center;
     text-align: center;
   }
 
