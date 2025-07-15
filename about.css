@@ -1,0 +1,304 @@
+/* Base Styles */
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  background-color: #ffffff;
+  color: #111;
+  line-height: 1.6;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.2rem 2rem;
+  font-weight: 500;
+  border-bottom: 1px solid #e0e0e0;
+  background-color: #fff;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.nav-left {
+  font-size: 1.2rem;
+}
+
+.nav-center {
+  display: flex;
+  gap: 1.2rem;
+}
+
+.nav-center a {
+  text-decoration: none;
+  color: #111;
+}
+
+.nav-right {
+  font-size: 1.8rem;
+  cursor: pointer;
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .nav-center {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: #fff;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem 0;
+    display: none;
+    border-bottom: 1px solid #e0e0e0;
+    z-index: 999;
+  }
+
+  .nav-center.show {
+    display: flex;
+  }
+
+  .nav-right {
+    display: block;
+  }
+}
+
+/* About Section */
+.about-therapist {
+  background-color: #f6f2fd;
+  padding: 4rem 0;
+}
+
+.about-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  gap: 2rem;
+}
+
+.about-text {
+  flex: 1 1 500px;
+}
+
+.about-text h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.about-text p {
+  font-size: 1rem;
+  line-height: 1.8;
+  color: #333;
+}
+
+.about-image {
+  flex: 1 1 400px;
+  text-align: center;
+}
+
+.about-image img {
+  max-width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+}
+
+@media (max-width: 768px) {
+  .about-wrapper {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .about-text {
+    order: 2;
+  }
+
+  .about-image {
+    order: 1;
+  }
+}
+
+/* Journey Section */
+.journey-section {
+  background-color: #ffffff;
+  padding: 4rem 2rem;
+}
+
+.journey-container {
+  max-width: 850px;
+  margin: 0 auto;
+  color: #333;
+}
+
+.journey-container h2 {
+  font-size: 2rem;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.journey-container p {
+  margin-bottom: 1.5rem;
+  font-size: 1rem;
+  line-height: 1.8;
+}
+
+/* Qualifications Section */
+.qualifications-section {
+  background-color: #ffffff;
+  padding: 4rem 2rem;
+}
+
+.qualifications-container {
+  max-width: 850px;
+  margin: 0 auto;
+  color: #333;
+}
+
+.qualifications-container h2 {
+  font-size: 2rem;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.qualifications-container p {
+  margin-bottom: 1.5rem;
+  font-size: 1rem;
+  line-height: 1.8;
+}
+
+.qualifications-container strong {
+  font-weight: 600;
+  color: #7f5aa8;
+}
+
+.qualifications-container em {
+  font-style: italic;
+  color: #555;
+}
+
+/* Footer */
+.footer {
+  background-color: #f6f2fd;
+  padding: 3rem 2rem;
+  font-size: 0.95rem;
+}
+
+.footer-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+/* Footer Left */
+.footer-left {
+  flex: 1 1 300px;
+}
+
+.footer-left h2 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.footer-sub {
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
+
+.contact-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.contact-list li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.6rem;
+}
+
+.contact-list i {
+  color: #7f5aa8;
+  margin-right: 0.6rem;
+  min-width: 18px;
+  text-align: center;
+}
+
+.contact-list a {
+  color: #444;
+  text-decoration: none;
+}
+
+.contact-list a:hover {
+  text-decoration: underline;
+}
+
+/* Footer Right */
+.footer-right {
+  flex: 1 1 300px;
+  text-align: right;
+}
+
+.policy-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1rem 0;
+}
+
+.policy-list li {
+  margin-bottom: 0.5rem;
+}
+
+.policy-list a {
+  color: #444;
+  text-decoration: none;
+}
+
+.policy-list a:hover {
+  text-decoration: underline;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+}
+
+.social-icons a {
+  color: #7f5aa8;
+  font-size: 1.3rem;
+  transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+  color: #5e3e9c;
+}
+
+/* Footer Responsive */
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+  }
+
+  .footer-right {
+    text-align: center;
+  }
+
+  .social-icons {
+    justify-content: center;
+  }
+}
