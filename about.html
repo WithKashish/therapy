@@ -7,11 +7,78 @@
   <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="about.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <style>
+    /* Responsive navbar toggle */
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1.2rem 2rem;
+      font-weight: 500;
+      border-bottom: 1px solid #e0e0e0;
+      position: relative;
+    }
+
+    .nav-left {
+      font-size: 1.2rem;
+    }
+
+    .nav-center {
+      display: flex;
+      gap: 1.2rem;
+    }
+
+    .nav-center a {
+      text-decoration: none;
+      color: #111;
+    }
+
+    .nav-right {
+      font-size: 1.8rem;
+      cursor: pointer;
+      display: none;
+    }
+
+    @media (max-width: 768px) {
+      .nav-center {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: #fff;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+        padding: 1rem 0;
+        display: none;
+        border-bottom: 1px solid #e0e0e0;
+        z-index: 999;
+      }
+
+      .nav-center.show {
+        display: flex;
+      }
+
+      .nav-right {
+        display: block;
+      }
+    }
+  </style>
 </head>
 
 <body>
 
-  
+  <!-- Responsive Navigation -->
+  <header class="navbar">
+    <div class="nav-left">WithKashish</div>
+    <nav class="nav-center">
+      <a href="about.html">About your therapist</a>
+      <a href="workshops.html">Workshops</a>
+      <a href="booking.html">Book your session now</a>
+    </nav>
+    <div class="nav-right">&#9776;</div> <!-- Hamburger icon -->
+  </header>
+
   <!-- Hero Section -->
   <section class="about-therapist">
     <div class="about-wrapper">
@@ -96,15 +163,18 @@
       </div>
     </div>
   </footer>
-// script.js
-document.addEventListener('DOMContentLoaded', function () {
-  const navToggle = document.querySelector('.nav-right');
-  const navLinks = document.querySelector('.nav-center');
 
-  navToggle.addEventListener('click', () => {
-    navLinks.classList.toggle('show');
-  });
-});
+  <!-- Navbar toggle script -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const navToggle = document.querySelector('.nav-right');
+      const navLinks = document.querySelector('.nav-center');
+
+      navToggle.addEventListener('click', () => {
+        navLinks.classList.toggle('show');
+      });
+    });
+  </script>
 
 </body>
 </html>
