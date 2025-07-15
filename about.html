@@ -6,108 +6,98 @@
   <title>About Your Therapist | WithKashish</title>
   <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
-</head>
 
-<body>
+  <style>
+    /* Navbar */
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1.2rem 2rem;
+      font-weight: 500;
+      border-bottom: 1px solid #e0e0e0;
+      background-color: #fff;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
 
-  <!-- Responsive Navigation -->
-  <header class="navbar">
-    <div class="nav-left">WithKashish</div>
-    <nav class="nav-center">
-      <a href="about.html">About your therapist</a>
-      <a href="workshops.html">Workshops</a>
-      <a href="booking.html">Book your session now</a>
-    </nav>
-    <div class="nav-right">&#9776;</div>
-  </header>
+    .nav-left {
+      font-size: 1.2rem;
+    }
 
-  <!-- Hero Section (full width lavender) -->
-  <section class="about-therapist">
-    <div class="about-wrapper">
-      <div class="about-text">
-        <h1>YELLLOO!!</h1>
-        <p>
-          Hey there!! I’m Kashish. Taking this first step takes immense courage, and I honor that.
-          And full disclosure, I’ve navigated my own stuff to stand here. So, when I say -
-          "there might be moments you want to hide yourself completely in this room.
-          But I promise you, I’ll still see every single bit of you." I mean it.
-          The most important thing? When that happens, it’s absolutely going to be safe and okay.
-        </p>
-      </div>
-      <div class="about-image">
-        <img src="kashish-about.png" alt="Kashish smiling at dog" />
-      </div>
-    </div>
-  </section>
+    .nav-center {
+      display: flex;
+      gap: 1.2rem;
+    }
 
-  <!-- Journey Section -->
-  <section class="journey-section">
-    <div class="journey-container">
-      <h2>My Journey</h2>
-      <p>The truth is, my story started long before I understood anything. I lost my mom when I was just 16 days old... I didn’t even get to know her, and still — I missed her...</p>
-      <p>I grew up in a big joint family. There were always people around, a lot of love, and even more pampering. But I never really felt safe... That silence turned into anger, frustration, distance.</p>
-      <p>Academically, my cousins were brilliant. And I was just… trying. But no matter how much I pushed myself... it was easier to fake it than to feel the constant shame of failing.</p>
-      <p>Food became my comfort. My escape. I gained weight, struggled with obesity... My body became something I felt disconnected from — a source of shame, not home.</p>
-      <p>There were other things too... I was loud, funny, dramatic — but inside, I was shut down. I craved connection, but mistook attention for closeness.</p>
-      <p>I held so much inside... Then one day, a friend looked at me and gently said, “Why don’t you try therapy?”</p>
-      <p>Eventually I went. And in that room, I was allowed to just be. I could talk about things I never told anyone... Like my pain made sense. Like I made sense.</p>
-      <p>But little by little, I started coming back to myself... I found a deeper connection to who I really am.</p>
-      <p>That’s why I created <strong>WithKashish</strong>. Not because I have all the answers. But because I know what it feels like to live with unspoken pain. <strong>WithKashish</strong> is a space where you don’t have to perform... You’re allowed to just be. Exactly as you are.</p>
-    </div>
-  </section>
+    .nav-center a {
+      text-decoration: none;
+      color: #111;
+    }
 
-  <!-- Qualifications Section -->
-  <section class="qualifications-section">
-    <div class="qualifications-container">
-      <h2>My Qualifications and Expertise.</h2>
-      <p>Heard my story? Great! Now, for the part where you're probably wondering, "Okay, but does Kashish actually know her stuff?" Think of this as your quick, no-boring-bits qualification check...</p>
-      <p>I did my schooling from <strong>Laxman Public School</strong>. My formal education started with <strong>B.A. in Psychology Honours from Delhi University (Zakir Husain Delhi College)</strong>, then a <strong>Post-Graduation in Counselling Psychology from Amity University Noida</strong>, along with a <strong>Diploma in Early Childhood Care and Education</strong>.</p>
-      <p>I've trained under Senior Psychologists at <strong>Sir Ganga Ram Hospital</strong>, <strong>Holy Family Hospital</strong>, and worked on initiatives like the <strong>Disha Kiran – IITD Project</strong>.</p>
-      <p><strong>Modalities:</strong> Certified in <strong>Expressive Arts Therapy (CID-UNESCO)</strong>, <strong>Internal Family Systems (IFS)</strong>, <strong>Shadow Work</strong>, and <strong>Cognitive Behavioral Therapy (CBT)</strong>.</p>
-      <p><strong>Crisis & Listening Expertise:</strong> QPR (Question. Persuade. Refer) Suicide Gatekeeper, Suicide Prevention Training, 140+ hours of intensive listening training.</p>
-      <p><strong>Body Language Certified</strong> + published research in <em>“Humanities and Social Science Review”</em>.</p>
-      <p><strong>400+ client sessions</strong> and <strong>15+ raw, healing workshops across India</strong>. I’ve done the work—personally and professionally—to be truly present. <strong>WithKashish</strong>.</p>
-    </div>
-  </section>
+    .nav-right {
+      font-size: 1.8rem;
+      cursor: pointer;
+      display: none;
+    }
 
-  <!-- Footer -->
-  <footer class="footer">
-    <div class="footer-container">
-      <div class="footer-left">
-        <h2>WithKashish</h2>
-        <p class="footer-sub">Connect With Us</p>
-        <ul class="contact-list">
-          <li><i class="fas fa-phone-alt"></i> +91 7827055968</li>
-          <li><i class="fas fa-envelope"></i> <a href="mailto:kashishgupta05@gmail.com">kashishgupta05@gmail.com</a></li>
-          <li><i class="fas fa-map-marker-alt"></i> East of Kailash, New Delhi, India</li>
-        </ul>
-      </div>
-      <div class="footer-right">
-        <ul class="policy-list">
-          <li><a href="Privacy-policy.html">Privacy Policy</a></li>
-          <li><a href="accessibility-statement.html">Accessibility Statement</a></li>
-          <li><a href="terms-&-conditions.html">Terms & Conditions</a></li>
-          <li><a href="refund-policy.html">Refund Policy</a></li>
-        </ul>
-        <div class="social-icons">
-          <a href="https://linkedin.com/in/kashishgupta05" target="_blank"><i class="fab fa-linkedin-in"></i></a>
-          <a href="https://instagram.com/therapy_withkashish" target="_blank"><i class="fab fa-instagram"></i></a>
-        </div>
-      </div>
-    </div>
-  </footer>
+    @media (max-width: 768px) {
+      .nav-center {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: #fff;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+        padding: 1rem 0;
+        display: none;
+        border-bottom: 1px solid #e0e0e0;
+        z-index: 999;
+      }
 
-  <!-- Mobile Navbar Toggle Script -->
-  <script>
-    document.addEventListener('DOMContentLoaded', function () {
-      const navToggle = document.querySelector('.nav-right');
-      const navLinks = document.querySelector('.nav-center');
+      .nav-center.show {
+        display: flex;
+      }
 
-      navToggle.addEventListener('click', () => {
-        navLinks.classList.toggle('show');
-      });
-    });
-  </script>
+      .nav-right {
+        display: block;
+      }
+    }
 
-</body>
-</html>
+    /* Hero section fixes */
+    .about-therapist {
+      background-color: #f6f2fd;
+      padding: 4rem 0;
+    }
+
+    .about-wrapper {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 2rem;
+      gap: 2rem;
+    }
+
+    .about-text {
+      flex: 1 1 500px;
+    }
+
+    .about-text h1 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .about-text p {
+      font-size: 1rem;
+      line-height: 1.8;
+      color: #333;
+    }
+
+    .about-image {
+      fle
