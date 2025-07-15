@@ -494,4 +494,50 @@ body {
   aspect-ratio: 9/16; /* Keeps vertical Reels/YT Shorts format */
   border-radius: 10px;
 }
+/* Workshop Intro Section */
+.workshop-intro {
+  padding: 4rem 1.5rem;
+  background-color: #fff;
+}
+
+.workshop-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  gap: 2rem;
+}
+
+.workshop-image {
+  flex: 1 1 400px;
+  text-align: center;
+}
+
+.workshop-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+.workshop-container h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #111;
+}
+
+.workshop-container p {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+@media (max-width: 768px) {
+  .workshop-container {
+    flex-direction: column;
+    text-align: center;
+  }
+}
 
