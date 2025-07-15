@@ -6,6 +6,18 @@ body {
   color: #111;
 }
 
+/* Page Container (Global Horizontal Padding) */
+.page-container {
+  padding: 0 1.5rem;
+}
+
+@media (min-width: 1200px) {
+  .page-container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+}
+
 /* Navigation Bar */
 .navbar {
   display: flex;
@@ -67,7 +79,7 @@ body {
 .hero {
   display: flex;
   flex-wrap: wrap;
-  padding: 3rem 2rem;
+  padding: 3rem 0;
   align-items: center;
   justify-content: space-between;
 }
@@ -100,35 +112,135 @@ body {
   border-radius: 10px;
 }
 
-/* About Section */
-.about-section {
-  padding: 4rem 2rem;
-  max-width: 850px;
-  margin: auto;
-  font-size: 1rem;
-  line-height: 1.7;
+/* About Therapist Section */
+.about-therapist {
+  background-color: #f6f2fd;
+  padding: 4rem 0;
+}
+
+.about-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+}
+
+.about-text {
+  flex: 1 1 500px;
+  min-width: 300px;
+}
+
+.about-text h1 {
+  font-size: 2.5rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
   color: #222;
 }
 
-.about-section h2,
-.about-section h3 {
-  font-size: 1.7rem;
-  margin-top: 2rem;
-  margin-bottom: 1rem;
+.about-text p {
+  font-size: 1rem;
+  line-height: 1.8;
+  color: #333;
+  margin-bottom: 1.5rem;
 }
 
-.about-section p {
-  margin-bottom: 1.2rem;
+.about-cta {
+  display: inline-block;
+  margin-bottom: 1rem;
+  font-weight: 500;
+  text-decoration: underline;
+  color: #7f5aa8;
+}
+
+.about-cta:hover {
+  color: #5e3e9c;
+}
+
+.about-socials {
+  margin-top: 0.5rem;
+}
+
+.about-socials a {
+  margin-right: 1rem;
+  color: #333;
+  font-size: 1.2rem;
+  text-decoration: none;
+}
+
+.about-socials a:hover {
+  color: #7f5aa8;
+}
+
+.about-image {
+  flex: 1 1 400px;
+  text-align: center;
+}
+
+.about-image img {
+  max-width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+@media (max-width: 768px) {
+  .about-wrapper {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .about-text {
+    order: 2;
+  }
+
+  .about-image {
+    order: 1;
+  }
+
+  .about-socials {
+    justify-content: center;
+  }
+}
+
+/* Journey & Qualifications Section */
+.journey-section,
+.qualifications-section {
+  padding: 4rem 0;
+  background-color: #ffffff;
+}
+
+.journey-container,
+.qualifications-container {
+  max-width: 850px;
+  margin: auto;
+  font-size: 1rem;
+  line-height: 1.8;
   color: #333;
 }
 
-.about-list {
-  margin-top: 1rem;
-  padding-left: 1.2rem;
+.journey-container h2,
+.qualifications-container h2 {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 2rem;
+  text-align: center;
+  color: #222;
 }
 
-.about-list li {
-  margin-bottom: 0.8rem;
+.journey-container p,
+.qualifications-container p {
+  margin-bottom: 1.5rem;
+}
+
+.qualifications-container strong,
+.journey-container strong {
+  font-weight: 600;
+  color: #7f5aa8;
+}
+
+.qualifications-container em {
+  font-style: italic;
+  color: #555;
 }
 
 /* Testimonials */
@@ -294,17 +406,5 @@ body {
 
   .social-icons {
     justify-content: center;
-  }
-}
-/* Global layout padding */
-.page-container {
-  padding: 0 1.5rem;
-}
-
-/* Optional: keep things centered for large screens */
-@media (min-width: 1200px) {
-  .page-container {
-    max-width: 1200px;
-    margin: 0 auto;
   }
 }
