@@ -115,7 +115,8 @@ body {
 /* About Therapist Section */
 .about-therapist {
   background-color: #f6f2fd;
-  padding: 4rem 0;
+  padding: 4rem 0; /* no horizontal padding */
+  width: 100%;
 }
 
 .about-wrapper {
