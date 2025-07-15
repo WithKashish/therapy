@@ -96,6 +96,15 @@
       </div>
     </div>
   </footer>
+// script.js
+document.addEventListener('DOMContentLoaded', function () {
+  const navToggle = document.querySelector('.nav-right');
+  const navLinks = document.querySelector('.nav-center');
+
+  navToggle.addEventListener('click', () => {
+    navLinks.classList.toggle('show');
+  });
+});
 
 </body>
 </html>
