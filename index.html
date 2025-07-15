@@ -1,201 +1,333 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>WithKashish</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="style.css" />
-  <link rel="stylesheet"
-  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
-  <link rel="stylesheet"
-  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+/* Reset & Base */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #fff;
+  color: #111;
+  line-height: 1.6;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
 
-</head>
-<body>
-<!-- Navigation -->
- <header class="navbar">
-    <div class="nav-left">WithKashish</div>
-    <nav class="nav-center" id="nav-links">
-      <a href="index.html">Home</a>
-      <a href="about.html">About</a>
-      <a href="workshops.html">Workshops</a>
-      <a href="booking.html">Book a Session</a>
-    </nav>
-    <div class="nav-right">
-      <i class="fas fa-bars"></i>
-    </div>
-  </header>
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.2rem 2rem;
+  font-weight: 500;
+  border-bottom: 1px solid #e0e0e0;
+  background-color: #fff;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
 
+.nav-left {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
 
+.nav-center {
+  display: flex;
+  gap: 1.5rem;
+}
 
-  <!-- Hero Section -->
-  <section class="hero">
-    <div class="hero-text">
-      <h1>WithKashish</h1>
-      <p>Not here to fix you. Just to help you face what you’ve buried. Bring your darkest desires, your “ugliest” thoughts.</p>
-    </div>
-    <div class="hero-image">
-      <img src="withkashish-hero.jpg" alt="Kashish sitting on red chair" />
-    </div>
-  </section>
-<!-- About Section -->
-<section class="about-section">
-  <h2>Welcome to WithKashish</h2>
-  <p>
-    You know that exhausting whisper – ‘Log kya kahenge?’ It tells you to hide stretch marks, pluck facial hair, or pretend dark patches don’t exist. Maybe you fake orgasms, bury desires feeling ‘wrong’ or ‘dirty’—like wanting to be dominated in sex, or exploring something ‘unconventional’. Perhaps you’re always the ‘strong one,’ quietly crumbling, or trapped in a relationship you desperately want to leave.
-  </p>
-  <p>
-    You might battle constant anxiety, feel like an imposter, or struggle with hidden resentment. Maybe you’re queer, polyamorous, or gender non-conforming, exhausted by hiding who you are. You’re constantly performing, suffocating in a mold, living with a daily weight no one sees—a weight that comes out as outbursts, people-pleasing, or numbness. This space is for that heavy burden you carry in silence. You’re not alone, and here, you don’t have to carry it anymore.
-  </p>
+.nav-center a {
+  text-decoration: none;
+  color: #111;
+  transition: color 0.3s ease;
+}
 
-  <h3>What We Do Here?</h3>
-  <p>
-    At <strong>WithKashish</strong>, I’m not here to ‘fix’ you, because you’re not broken. We’ll gently explore parts you’ve run from, expressing them not just with words, but through drama, art, and music. I can’t promise everything will be ‘figured out,’ but I can promise a deeper, more honest connection with yourself. This means living authentically: speaking your truth, choosing joy over obligation, feeling truly at home in your own skin. It’s about shedding heavy weight and finally experiencing the freedom of being entirely, unapologetically you.
-  </p>
+.nav-center a:hover {
+  color: #7f5aa8;
+}
 
-  <h3>Who I Work With?</h3>
-  <p>
-    ‘Is this really for me?’ If any of these resonate, you’re in the right place. I hold space for the things most people are afraid to say out loud:
-  </p>
-  <p>
-    Whether you’ve spoken it before or never dared to, it’s safe here. Over the last few years, I’ve had the honor of walking alongside 400+ client sessions — across identities, age groups, and life stories — and holding 15+ raw, healing-centered workshops across India. Each one showed me how universal our pain can be… and how uniquely each person deserves to be met in it.
-  </p>
+.nav-right {
+  font-size: 1.8rem;
+  cursor: pointer;
+  display: none;
+}
 
-  <ul class="about-list">
-    <li><strong>Overwhelming emotions</strong> — rage, grief, shame, guilt, jealousy, numbness</li>
-    <li><strong>Emotional suppression</strong> — feeling shut down, disconnected, or like your feelings are “too much”</li>
-    <li><strong>Taboo desires</strong> — sexual fantasies, kink curiosity, intrusive thoughts, emotional cravings that feel “wrong”</li>
-    <li><strong>Inner conflict</strong> — feeling split between who you are and who you’re “supposed” to be</li>
-    <li><strong>Inner child wounds</strong> — unmet needs, abandonment pain, feeling unlovable or unsafe</li>
-    <li><strong>Fear of intimacy or abandonment</strong> — constantly chasing or pushing away love</li>
-    <li><strong>Chronic self-doubt</strong> — imposter syndrome, insecurity, low self-worth, comparison</li>
-    <li><strong>Perfectionism & people-pleasing</strong> — hiding your truth to be accepted</li>
-    <li><strong>Body image & sexual shame</strong> — struggling with feeling desirable, lovable, or comfortable in your own skin</li>
-    <li><strong>Identity</strong> — Queerness, polyamory, or non-conformity.</li>
-  </ul>
-</section>
-<!-- Testimonials Section -->
-<section class="testimonials" id="testimonials">
-  <div class="testimonial-box" id="testimonial-box">
-    <p id="testimonial-text">Loading...</p>
-    <h4 id="testimonial-author"></h4>
-  </div>
-  <button class="nav-arrow left" onclick="prevTestimonial()">&#10094;</button>
-  <button class="nav-arrow right" onclick="nextTestimonial()">&#10095;</button>
-</section>
-
-<script>
-  const testimonials = [
-    {
-      text: `I had a truly positive experience with Kashish. She created a safe and comfortable space where I could open up without hesitation. We delved deep into the root causes of my concerns, and her insightful guidance helped me gain clarity and make meaningful progress in my mental health journey. The strategies she suggested were practical and effective, and I’ve seen a significant improvement in my overall well-being. I’m genuinely grateful for her support and would highly recommend her to anyone seeking professional help.`,
-      author: "Paras Bhawsar"
-    },
-    {
-      text: `Counselling - as I knew before coming to IIT - was mainly for big decisions like what stream or college to choose. But at IIT, I realized it's the little things that matter most. You helped me see clearly, delicately, like brushing away bugs from a flower.`,
-      author: "Parth"
-    },
-    {
-      text: `What stood out most about working with you was how seen and heard I felt. You gave me the space to open up without fear of judgment. I’m truly grateful for the warmth, patience, and understanding you brought into every session.`,
-      author: "Aman Chopra"
-    },
-    {
-      text: `As an introvert, I had avoided seeking help. But with you, I felt safe, heard, and seen. I’ve taken steps to stand up for myself and reconnect with my family. I’m so thankful.`,
-      author: "Srishti"
-    },
-    {
-      text: `It’s hard to say goodbye. Even in a few sessions, you made such a huge impact. Thank you for creating such a warm, safe space.`,
-      author: "Anonymous"
-    },
-    {
-      text: `From our first unexpected meeting to regular sessions, you’ve helped me explore myself deeply. I learned to ask questions, to say no, and to embrace what I know and don’t. That first walk into your office was life-changing.`,
-      author: "Amit Singh Nitharwal"
-    },
-    {
-      text: `When I first met you, I was emotionally distant. Despite seeming fine, I felt numb inside. You never forced anything, just listened, patiently. Therapy became something I looked forward to. I now feel more connected and alive.`,
-      author: "Anonymous"
-    }
-  ];
-
-  let currentIndex = 0;
-
-  function showTestimonial(index) {
-    const box = document.getElementById("testimonial-box");
-    const text = document.getElementById("testimonial-text");
-    const author = document.getElementById("testimonial-author");
-
-    // Fade out
-    box.classList.remove("show");
-
-    setTimeout(() => {
-      const testimonial = testimonials[index];
-      text.innerText = testimonial.text;
-      author.innerText = `— ${testimonial.author}`;
-
-      // Fade in
-      box.classList.add("show");
-    }, 100);
+@media (max-width: 768px) {
+  .nav-center {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: #fff;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem 0;
+    display: none;
+    border-bottom: 1px solid #e0e0e0;
+    z-index: 999;
   }
 
-  function nextTestimonial() {
-    currentIndex = (currentIndex + 1) % testimonials.length;
-    showTestimonial(currentIndex);
+  .nav-center.show {
+    display: flex;
   }
 
-  function prevTestimonial() {
-    currentIndex = (currentIndex - 1 + testimonials.length) % testimonials.length;
-    showTestimonial(currentIndex);
+  .nav-right {
+    display: block;
+  }
+}
+
+/* Hero Section */
+.hero {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  padding: 4rem 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.hero-text {
+  flex: 1 1 45%;
+}
+
+.hero-text h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.hero-text p {
+  font-size: 1rem;
+  color: #333;
+}
+
+.hero-image {
+  flex: 1 1 50%;
+  text-align: center;
+}
+
+.hero-image img {
+  max-width: 85%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+}
+
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column;
+    text-align: center;
   }
 
-  window.onload = () => {
-    showTestimonial(currentIndex);
-    setInterval(nextTestimonial, 3000);
-  };
-</script>
+  .hero-text, .hero-image {
+    flex: 1 1 100%;
+  }
+}
 
-<!-- Instagram Feed -->
-  <div class="insta-widget">
-<section class="instagram">
-  <h2>Follow Us</h2>
-  <hr />
-  <p>
-<!-- Elfsight Instagram Feed | Untitled Instagram Feed -->
-<script src="https://static.elfsight.com/platform/platform.js" async></script>
-<div class="elfsight-app-087cf0d2-dd87-4f01-83a6-39298ac50493" data-elfsight-app-lazy></div>    </a>
-  </p>
-</section>
+/* About Section */
+.about-section {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 4rem 1rem;
+}
 
+.about-section h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  text-align: center;
+}
 
-  </div>
-</section>
-<footer class="footer">
-  <div class="footer-container">
-    <div class="footer-left">
-      <h2>WithKashish</h2>
-      <p class="footer-sub">Connect With Us</p>
-      <ul class="contact-list">
-        <li><i class="fas fa-phone-alt"></i> +91 7827055968</li>
-        <li><i class="fas fa-envelope"></i> <a href="mailto:kashishgupta05@gmail.com">kashishgupta05@gmail.com</a></li>
-        <li><i class="fas fa-map-marker-alt"></i> East of Kailash, New Delhi, India</li>
-      </ul>
-    </div>
+.about-section p {
+  margin-bottom: 1.5rem;
+  font-size: 1rem;
+  color: #444;
+}
 
-    <div class="footer-right">
-      <ul class="policy-list">
-        <li><a href="Privacy-policy.html">Privacy Policy</a></li>
-        <li><a href="accessibility-statement.html">Accessibility Statement</a></li>
-        <li><a href="terms-&-conditions.html">Terms & Conditions</a></li>
-        <li><a href="refund-policy.html">Refund Policy</a></li>
-      </ul>
-      <div class="social-icons">
-        <a href="https://linkedin.com/in/kashishgupta05" target="_blank"><i class="fab fa-linkedin-in"></i></a>
-        <a href="https://instagram.com/therapy_withkashish" target="_blank"><i class="fab fa-instagram"></i></a>
-      </div>
-    </div>
-  </div>
-</footer>
+.about-section h3 {
+  font-size: 1.3rem;
+  margin-top: 2rem;
+  margin-bottom: 0.8rem;
+  color: #333;
+}
 
+.about-list {
+  list-style: disc;
+  padding-left: 1.5rem;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+}
 
-</body>
-</html>
+.about-list li {
+  margin-bottom: 0.8rem;
+  color: #333;
+}
+
+/* Testimonials */
+.testimonials {
+  background-color: #f9f9f9;
+  padding: 4rem 1rem;
+  text-align: center;
+  overflow: hidden;
+}
+
+.testimonial-box {
+  max-width: 700px;
+  margin: 0 auto;
+  font-size: 1rem;
+  padding: 1rem;
+  color: #333;
+  transition: opacity 0.5s ease-in-out;
+  min-height: 150px;
+}
+
+.testimonial-box h4 {
+  font-weight: 600;
+  margin-top: 1rem;
+  color: #000;
+}
+
+.testimonial-box.show {
+  opacity: 1;
+}
+
+.nav-arrow {
+  display: none; /* Hide arrows if only one image */
+}
+
+/* Instagram Feed */
+.insta-widget {
+  padding: 4rem 1rem;
+  text-align: center;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.instagram h2 {
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+}
+
+.instagram hr {
+  margin: 1rem auto;
+  width: 60px;
+  border: 1px solid #ccc;
+}
+
+/* Footer */
+.footer {
+  background-color: #f6f2fd;
+  padding: 3rem 2rem;
+  font-size: 0.95rem;
+}
+
+.footer-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.footer-left {
+  flex: 1 1 300px;
+}
+
+.footer-left h2 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.footer-sub {
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
+
+.contact-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.contact-list li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.6rem;
+}
+
+.contact-list i {
+  color: #7f5aa8;
+  margin-right: 0.6rem;
+  min-width: 18px;
+  text-align: center;
+}
+
+.contact-list a {
+  color: #444;
+  text-decoration: none;
+}
+
+.contact-list a:hover {
+  text-decoration: underline;
+}
+
+.footer-right {
+  flex: 1 1 300px;
+  text-align: right;
+}
+
+.policy-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1rem 0;
+}
+
+.policy-list li {
+  margin-bottom: 0.5rem;
+}
+
+.policy-list a {
+  color: #444;
+  text-decoration: none;
+}
+
+.policy-list a:hover {
+  text-decoration: underline;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+}
+
+.social-icons a {
+  color: #7f5aa8;
+  font-size: 1.3rem;
+  transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+  color: #5e3e9c;
+}
+
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+  }
+
+  .footer-right {
+    text-align: center;
+  }
+
+  .social-icons {
+    justify-content: center;
+  }
+}
