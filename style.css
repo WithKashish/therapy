@@ -113,4 +113,42 @@ body {
   display: none;
 }
 
-/* Footer styles stay unchanged for now */
+.testimonials {
+  max-width: 800px;
+  margin: 4rem auto;
+  padding: 2rem;
+  text-align: center;
+  position: relative;
+  background-color: #f6f2fd;
+  border-radius: 1rem;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+}
+
+.testimonial-box {
+  opacity: 0;
+  transition: opacity 0.4s ease-in-out;
+  min-height: 150px;
+}
+
+.testimonial-box.show {
+  opacity: 1;
+}
+
+.testimonial-box p {
+  font-size: 1.1rem;
+  font-style: italic;
+  color: #333;
+  margin-bottom: 1rem;
+  line-height: 1.7;
+}
+
+.testimonial-box h4 {
+  font-weight: 600;
+  color: #5e3e9c;
+  font-size: 1rem;
+}
+
+.nav-arrow {
+  display: none; /* permanently hidden */
+}
+
